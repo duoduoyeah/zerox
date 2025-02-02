@@ -12,12 +12,13 @@ class ZeroxArgs:
     cleanup: bool = True
     concurrency: int = 10
     maintain_format: bool = False
-    model: str = "gpt-4o-mini",
+    model: str = ("gpt-4o-mini",)
     output_dir: Optional[str] = None
     temp_dir: Optional[str] = None
     custom_system_prompt: Optional[str] = None
     select_pages: Optional[Union[int, Iterable[int]]] = None
     kwargs: Dict[str, Any] = field(default_factory=dict)
+
 
 @dataclass
 class Page:

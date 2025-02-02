@@ -6,6 +6,7 @@ if TYPE_CHECKING:
 
 T = TypeVar("T", bound="BaseModel")
 
+
 class BaseModel(ABC):
     """
     Base class for all models.
@@ -16,13 +17,13 @@ class BaseModel(ABC):
         self,
     ) -> "CompletionResponse":
         raise NotImplementedError("Subclasses must implement this method")
-    
+
     @abstractmethod
     def validate_access(
         self,
     ) -> None:
         raise NotImplementedError("Subclasses must implement this method")
-    
+
     @abstractmethod
     def validate_model(
         self,
@@ -40,5 +41,3 @@ class BaseModel(ABC):
         ## validations
         # self.validate_model()
         # self.validate_access()
-
-

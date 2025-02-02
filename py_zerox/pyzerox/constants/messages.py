@@ -5,7 +5,7 @@ class Messages:
     Required environment variable (keys) from the model are Missing. Please set the required environment variables for the model provider.
     Refer: https://docs.litellm.ai/docs/providers
     """
-    
+
     NON_VISION_MODEL = """
     The provided model is not a vision model. Please provide a vision model.
     """

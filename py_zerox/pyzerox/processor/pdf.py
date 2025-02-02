@@ -25,9 +25,7 @@ async def convert_pdf_to_images(local_path: str, temp_dir: str) -> List[str]:
     }
 
     try:
-        image_paths = await asyncio.to_thread(
-            convert_from_path, **options
-        )
+        image_paths = await asyncio.to_thread(convert_from_path, **options)
         return image_paths
     except Exception as err:
         logging.error(f"Error converting PDF to images: {err}")

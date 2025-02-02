@@ -15,6 +15,7 @@ class MissingEnvironmentVariables(CustomException):
     ):
         super().__init__(message, extra_info)
 
+
 class NotAVisionModel(CustomException):
     """Exception raised when the provided model is not a vision model."""
 
@@ -24,6 +25,7 @@ class NotAVisionModel(CustomException):
         extra_info: Optional[Dict] = None,
     ):
         super().__init__(message, extra_info)
+
 
 class ModelAccessError(CustomException):
     """Exception raised when the provided model can't be accessed due to incorrect credentials/keys or incorrect environent variables setup."""
@@ -35,6 +37,7 @@ class ModelAccessError(CustomException):
     ):
         super().__init__(message, extra_info)
 
+
 class PageNumberOutOfBoundError(CustomException):
     """Exception invalid page number(s) provided."""
 
@@ -44,6 +47,7 @@ class PageNumberOutOfBoundError(CustomException):
         extra_info: Optional[Dict] = None,
     ):
         super().__init__(message, extra_info)
+
 
 class ResourceUnreachableException(CustomException):
     """Exception raised when a resource is unreachable."""
