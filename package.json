@@ -1,10 +1,11 @@
 {
   "name": "zerox",
-  "version": "1.0.41",
+  "version": "1.0.47",
   "description": "ocr documents using gpt-4o-mini",
   "main": "node-zerox/dist/index.js",
   "scripts": {
-    "build": "tsc -p node-zerox/tsconfig.json",
+    "clean": "rm -rf node-zerox/dist",
+    "build": "npm run clean && tsc -p node-zerox/tsconfig.json",
     "postinstall": "node node-zerox/scripts/install-dependencies.js",
     "prepublishOnly": "npm run build",
     "test": "ts-node node-zerox/tests/index.ts",
@@ -19,6 +20,7 @@
     "fs-extra": "^11.2.0",
     "libreoffice-convert": "^1.6.0",
     "mime-types": "^2.1.35",
+    "openai": "^4.82.0",
     "os": "^0.1.2",
     "p-limit": "^3.1.0",
     "path": "^0.12.7",
